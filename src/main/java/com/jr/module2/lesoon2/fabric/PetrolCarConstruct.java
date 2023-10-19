@@ -1,9 +1,9 @@
-package com.jr.fabric;
+package com.jr.module2.lesoon2.fabric;
 
-import com.jr.models.Car;
-import com.jr.models.PetrolCar;
+import com.jr.module2.lesoon2.models.Car;
+import com.jr.module2.lesoon2.models.PetrolCar;
 
-class HybridCarConstruct extends CarConstruct {
+class PetrolCarConstruct extends CarConstruct {
 
     private static int carCount = 0;
 

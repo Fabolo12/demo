@@ -1,7 +1,7 @@
-package com.jr.fabric;
+package com.jr.module2.lesoon2.fabric;
 
-import com.jr.models.Car;
-import com.jr.models.CarType;
+import com.jr.module2.lesoon2.models.Car;
+import com.jr.module2.lesoon2.models.CarType;
 
 public class CarFabric {
 

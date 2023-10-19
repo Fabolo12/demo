@@ -23,7 +23,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.jr.Main</mainClass>
+<!--                            <mainClass>com.jr.module2.lesoon2.Main</mainClass>-->
                         </manifest>
                     </archive>
                 </configuration>

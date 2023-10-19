@@ -1,6 +1,4 @@
-package com.jr;
-
-import java.io.IOException;
+package com.jr.module2.lesoon2;
 
 public class ChildClass extends MainClass {
     @Override

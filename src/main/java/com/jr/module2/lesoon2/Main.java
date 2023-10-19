@@ -1,10 +1,10 @@
-package com.jr;
+package com.jr.module2.lesoon2;
 
-import com.jr.fabric.CarFabric;
-import com.jr.models.Car;
-import com.jr.models.CarType;
-import com.jr.models.Engine;
-import com.jr.models.CarSystem;
+import com.jr.module2.lesoon2.fabric.CarFabric;
+import com.jr.module2.lesoon2.models.Car;
+import com.jr.module2.lesoon2.models.CarType;
+import com.jr.module2.lesoon2.models.Engine;
+import com.jr.module2.lesoon2.models.CarSystem;
 
 import java.util.List;
 
