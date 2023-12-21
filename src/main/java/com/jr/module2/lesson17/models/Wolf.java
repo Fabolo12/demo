@@ -6,7 +6,7 @@ public class Wolf extends Predator {
     private static final String CONFIG_KEY = "animal.predator.wolf.";
 
     @Override
-    protected String getConfigKey() {
+    public String getConfigKey() {
         return CONFIG_KEY;
     }
 

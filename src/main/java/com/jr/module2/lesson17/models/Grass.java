@@ -7,7 +7,7 @@ public class Grass extends Organism {
     private static final String CONFIG_KEY = "grass.";
 
     @Override
-    protected String getConfigKey() {
+    public String getConfigKey() {
         return CONFIG_KEY;
     }
 

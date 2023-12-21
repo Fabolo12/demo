@@ -3,7 +3,6 @@ package com.jr.module2.lesson17.models;
 import com.jr.module2.lesson17.config.ConfigLoader;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Map {
@@ -28,7 +27,7 @@ public class Map {
         map = new Cell[height][width];
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
-                map[i][j] = new Cell();
+                map[i][j] = new Cell(i, j);
             }
         }
     }
@@ -82,12 +81,21 @@ public class Map {
     }
 
     public class Cell {
+
         private final List<Animal> animals = new ArrayList<>();
         private final List<Grass> grasses = new ArrayList<>();
 
         private int animalLoad = 0;
 
         private int grassLoad = 0;
+
+        private final int height;
+        private final int width;
+
+        Cell(final int height, final int width) {
+            this.height = height;
+            this.width = width;
+        }
 
         public List<Animal> getAnimals() {
             return animals;
@@ -103,6 +111,14 @@ public class Map {
 
         public int getGrassLoad() {
             return grassLoad;
+        }
+
+        public int getHeight() {
+            return height;
+        }
+
+        public int getWidth() {
+            return width;
         }
     }
 }

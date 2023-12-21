@@ -7,7 +7,7 @@ public class Horse extends Herbivores {
     private static final String CONFIG_KEY = "animal.herbivores.horse.";
 
     @Override
-    protected String getConfigKey() {
+    public String getConfigKey() {
         return CONFIG_KEY;
     }
 

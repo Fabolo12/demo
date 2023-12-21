@@ -30,18 +30,16 @@ public class Lifecycle {
     public void life() throws InterruptedException, ExecutionException {
         initLife();
         logService.logInfo();
+        System.out.println("INIT COMPLETED");
 
-        /*while (true) {
-            final Future<?> submitAnimalCycle = executor.submit(() -> {
-            });
-            final Future<?> submitGrassCycle = executor.submit(() -> {
-            });
-
+        while (true) {
+            final Future<?> submitAnimalCycle = executor.submit(new AnimalCycle());
+            final Future<?> submitGrassCycle = executor.submit(new GrassCycle());
             TimeUnit.MILLISECONDS.sleep(ConfigLoader.getIntegerProperty(CONFIG_KEY + "wait-time"));
             submitAnimalCycle.get();
             submitGrassCycle.get();
             logService.logInfo();
-        }*/
+        }
     }
 
     private void initLife() {

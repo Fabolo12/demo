@@ -7,5 +7,5 @@ public abstract class Organism {
     protected final String WEIGHT_CONFIG_KEY = getConfigKey() + "weight";
     protected final String MAX_COUNT_CONFIG_KEY = getConfigKey() + "max-count";
 
-    protected abstract String getConfigKey();
+    public abstract String getConfigKey();
 }
