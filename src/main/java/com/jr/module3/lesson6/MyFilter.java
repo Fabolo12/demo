@@ -25,7 +25,8 @@ public class MyFilter implements Filter {
     )  {
         String ipAddress = servletRequest.getRemoteAddr();
         String url = ((HttpServletRequest) servletRequest).getRequestURL().toString();
-        System.out.println("IP " + ipAddress + ", URL " + url);
+        final String method = ((HttpServletRequest) servletRequest).getMethod();
+        System.out.println("IP " + ipAddress + ", URL " + url + " , method: " + method);
 
         filterChain.doFilter(servletRequest, servletResponse);
     }

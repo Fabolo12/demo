@@ -14,7 +14,7 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 
-@WebServlet(name = "MyServlet", value = "/user")
+@WebServlet(name = "MyServlet", value = "/users")
 public class MyServlet extends HttpServlet {
 
     private static final Map<String, User> USER_MAP = new HashMap<>();
@@ -67,6 +67,10 @@ public class MyServlet extends HttpServlet {
     protected void doDelete(final HttpServletRequest req, final HttpServletResponse resp) {
         final String id = Objects.requireNonNull(req.getParameter("id"));
         final User removedUser = USER_MAP.remove(id);
+
+        if (removedUser == null) {
+            return;
+        }
 
         try (final PrintWriter writer = resp.getWriter()) {
             writer.println(String.format("User %s removed!", removedUser.name()));
