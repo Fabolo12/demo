@@ -9,7 +9,7 @@ import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.SneakyThrows;
 
-@WebFilter(filterName = "MyFilter", urlPatterns = "/*")
+@WebFilter(filterName = "lesson6/MyFilter", urlPatterns = "/*")
 public class MyFilter implements Filter {
     @Override
     public void init(final FilterConfig filterConfig) {
