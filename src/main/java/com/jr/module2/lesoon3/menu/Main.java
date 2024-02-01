@@ -5,7 +5,7 @@ import com.jr.module2.lesoon3.menu.actions.MenuOptions;
 import java.util.Scanner;
 
 public class Main {
-//    private BufferedInputStream reader = new BufferedInputStream(new InputStreamReader(System.in));
+//    private BufferedInputStream reader = new BufferedInputStream(new InputStreamReader(MySystem.in));
 
     public static void main(String[] args) {
         final Scanner scanner = new Scanner(System.in);

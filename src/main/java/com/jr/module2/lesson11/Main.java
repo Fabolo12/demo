@@ -15,8 +15,8 @@ public class Main {
         new Thread(threadGroup, new MyThread()).start();
         new Thread(threadGroup, new MyThread()).start();
         new Thread(threadGroup, new MyThread()).start();
-        System.out.println(threadGroup.activeCount());
-        System.out.println(threadGroup.getName());*/
+        MySystem.out.println(threadGroup.activeCount());
+        MySystem.out.println(threadGroup.getName());*/
 
         final ExecutorService executorService = Executors.newFixedThreadPool(10);
 

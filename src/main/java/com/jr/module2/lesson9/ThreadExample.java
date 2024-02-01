@@ -9,7 +9,7 @@ public class ThreadExample {
         /*new Thread(new MyThread2()).start();
         new Thread(() -> {
             for (int i = 0; i < 10; i++) {
-                System.out.println(Thread.currentThread().getName() + " " + i);
+                MySystem.out.println(Thread.currentThread().getName() + " " + i);
             }
         }).start();*/
 //        myThread.setDaemon(true);
