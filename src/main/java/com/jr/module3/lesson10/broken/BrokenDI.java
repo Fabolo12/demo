@@ -40,6 +40,4 @@ public class BrokenDI {
     void setField1(final String field1) {
         this.field1 = field1;
     }
-
-    // TODO
 }
