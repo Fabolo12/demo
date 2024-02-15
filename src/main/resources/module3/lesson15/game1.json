@@ -1,0 +1,15 @@
+{
+  "id": "1",
+  "text": "qwweerr {@username@}",
+  "answers": [
+    {
+      "text": "qwer",
+      "lose": "false",
+      "nextQuestion": "3"
+    },
+    {
+      "text": "qwer",
+      "lose": "true"
+    }
+  ]
+}
