@@ -1,0 +1,35 @@
+1 Це має бути Maven проект із використанням таких технологій: сервлети, jsp, jstl.
+1.1 Create a maven project
+1.2 Add dependencies
+2 Для запуску при тестуванні буде використовуватися Tomcat 10
+2.1 Create a simple index.html
+2.2 Run Tomcat
+3 Якась інформація має зберігатися у сесії. Це може бути ім'я гравця, кількість зіграних ігор або ще щось на твій розсуд.
+3.1 How store session info? +
+3.2 Which one session info we will store? (username, startSate, score etc.) +
+3.3 Store simple info +
+3.4 Create normal index.html and send user info to Java +/-
+3.4.1 Allow user to upload themself Games*
+3.5 Store user data in session +
+4 Write Game
+4.1 Game questions file
+4.1.1 How store game questions? (json, xml etc.) +
+4.1.2 Write simple game question in file (for example 3 questions) +
+4.1.3 System for load questions +
+4.1.3.1 Select what Game we want to load +/-
+4.2 Manage questions
+4.2.1 Load question
+4.2.2 Process answer
+4.2.2.1 Lose
+4.2.2.2 Win
+4.2.2.3 New question
+4.2.2.4 Add score*
+4.3 Servlets / JSP
+4.3.1 Question
+// Після перемоги чи поразки має бути можливість розпочати гру наново.
+4.3.2 Lose
+4.3.3 Win
+4.3.4 Lead table*
+5 Логіку потрібно покрити тестами. Використовуй JUnit.
+5.1 JUnit & Mockito
+6 Готовий проєкт потрібно залити до свого репозиторію на GitHub.

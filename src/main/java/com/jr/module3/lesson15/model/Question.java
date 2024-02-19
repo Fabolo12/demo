@@ -9,6 +9,6 @@ import java.util.List;
 @Setter
 public class Question {
     private int id;
-    private String label;
+    private String text;
     private List<Answer> answers;
 }

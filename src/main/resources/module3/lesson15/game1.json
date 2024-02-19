@@ -1,15 +1,30 @@
-{
-  "id": "1",
-  "text": "qwweerr {@username@}",
-  "answers": [
-    {
-      "text": "qwer",
-      "lose": "false",
-      "nextQuestion": "3"
-    },
-    {
-      "text": "qwer",
-      "lose": "true"
-    }
-  ]
-}
+[
+  {
+    "id": "1",
+    "text": "Hi player, how are you?",
+    "answers": [
+      {
+        "text": "Good",
+        "nextQuestion": "2"
+      },
+      {
+        "text": "Lose",
+        "lose": "true"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "text": "Do you want to play a game?",
+    "answers": [
+      {
+        "text": "yes",
+        "win": "true"
+      },
+      {
+        "text": "no",
+        "lose": "true"
+      }
+    ]
+  }
+]

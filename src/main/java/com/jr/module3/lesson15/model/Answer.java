@@ -7,6 +7,7 @@ import lombok.Setter;
 @Setter
 public class Answer {
     private boolean lose;
+    private boolean win;
     private String text;
     private int nextQuestion;
 }
