@@ -29,7 +29,7 @@ public class MyServlet extends HttpServlet {
     protected void doGet(final HttpServletRequest req, final HttpServletResponse resp) {
         try (final PrintWriter writer = resp.getWriter()) {
             USER_MAP.values().stream()
-                    .map(user -> String.format("User {id: %s, name: %s}", user.id(), user.name()))
+                    .map(user -> String.format("MyClient {id: %s, name: %s}", user.id(), user.name()))
                     .forEach(writer::println);
         }
     }
@@ -43,7 +43,7 @@ public class MyServlet extends HttpServlet {
         USER_MAP.put(id, user);
 
         try (final PrintWriter writer = resp.getWriter()) {
-            writer.println(String.format("User with id [%s] created!", id));
+            writer.println(String.format("MyClient with id [%s] created!", id));
         }
     }
 
@@ -73,7 +73,7 @@ public class MyServlet extends HttpServlet {
         }
 
         try (final PrintWriter writer = resp.getWriter()) {
-            writer.println(String.format("User %s removed!", removedUser.name()));
+            writer.println(String.format("MyClient %s removed!", removedUser.name()));
         }
     }
 }

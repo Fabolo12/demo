@@ -16,7 +16,7 @@ public class Main {
         client.postRequest();
         client.getRequest();
 
-        final User user = new User("Test");
+        final MyClient user = new MyClient("Test");
         final String jsonUser = GSON.toJson(user);
         client.postRequest(jsonUser);
         client.getRequest();

@@ -3,7 +3,7 @@ package com.jr.module3.lesson11.observer;
 public class UserRegisterObserver implements Observer {
     @Override
     public void update(final Event event) {
-        System.out.println("User info: " + event.data());
+        System.out.println("MyClient info: " + event.data());
     }
 
     @Override

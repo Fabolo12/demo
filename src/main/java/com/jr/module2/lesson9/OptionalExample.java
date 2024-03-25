@@ -37,12 +37,12 @@ public class OptionalExample {
     private static void ifPresentOrElse(final Optional<User> userEmpty, final Optional<User> userPresent) {
         System.out.println("ifPresentOrElse");
         userEmpty.ifPresentOrElse(
-                user -> System.out.println("userEmpty User found"),
-                () -> System.out.println("userEmpty User not found")
+                user -> System.out.println("userEmpty MyClient found"),
+                () -> System.out.println("userEmpty MyClient not found")
         );
         userPresent.ifPresentOrElse(
-                user -> System.out.println("userPresent User found"),
-                () -> System.out.println("userPresent User not found")
+                user -> System.out.println("userPresent MyClient found"),
+                () -> System.out.println("userPresent MyClient not found")
         );
     }
 
@@ -57,10 +57,10 @@ public class OptionalExample {
         try {
             final User user = userEmpty.orElseThrow(() -> new IllegalStateException());
         } catch (Exception e) {
-            System.out.println("User not found: " + e.getClass().getSimpleName());
+            System.out.println("MyClient not found: " + e.getClass().getSimpleName());
         }
         final User user = userPresent.orElseThrow();
-        System.out.println("User found");
+        System.out.println("MyClient found");
     }
 
     private static void or(final Optional<User> userEmpty, final Optional<User> userPresent) {
@@ -114,20 +114,20 @@ public class OptionalExample {
             System.out.println(userEmpty.get().email);
         }
         if (userEmpty.isEmpty()) {
-            System.out.println("User not found");
+            System.out.println("MyClient not found");
         }
 
         if (userPresent.isPresent()) {
             System.out.println(userPresent.get().email);
         }
         if (userPresent.isEmpty()) {
-            System.out.println("User not found");
+            System.out.println("MyClient not found");
         }
     }
 
    private static User getUser() {
        // TODO: 09/11/23
-//       return new User("@gmail.com");
+//       return new MyClient("@gmail.com");
        return null;
    }
 

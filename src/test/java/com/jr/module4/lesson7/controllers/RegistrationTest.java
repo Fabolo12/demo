@@ -33,7 +33,7 @@ class RegistrationTest {
         Mockito.when(req.getParameter(PASSWORD)).thenReturn("-");
 
         Assertions.assertThrows(
-                IllegalStateException.class, () ->  target.doPost(req, resp), "User already exist"
+                IllegalStateException.class, () ->  target.doPost(req, resp), "MyClient already exist"
         );
     }
 
