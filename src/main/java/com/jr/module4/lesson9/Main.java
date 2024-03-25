@@ -23,8 +23,10 @@ public class Main {
         user.setAge(20);
         entityManager.persist(user);
         entityManager.getTransaction().commit();
+        entityManager.close();
 
-        final MyClient user1 = entityManager.find(MyClient.class, user.getId());
+        final EntityManager entityManager1 = HibernateFactoryUtil.getEntityManager();
+        final MyClient user1 = entityManager1.find(MyClient.class, user.getId());
         System.out.println("jpaHibernate: " + user1);
     }
 
@@ -37,9 +39,11 @@ public class Main {
 //        session.save(user); @Deprecated
         session.persist(user);
         session.getTransaction().commit();
+        session.close();
 
-
-        final MyClient user1 = session.get(MyClient.class, user.getId());
+        final Session session1 = HibernateFactoryUtil.openSession();
+        final MyClient user1 = session1.get(MyClient.class, user.getId());
+        session1.persist(user);
         System.out.println("nativeHibernate: " + user1);
     }
 }
