@@ -41,9 +41,9 @@ public class Main {
         session.getTransaction().commit();
         session.close();
 
-        final Session session1 = HibernateFactoryUtil.openSession();
+        /*final Session session1 = HibernateFactoryUtil.openSession();
         final MyClient user1 = session1.get(MyClient.class, user.getId());
         session1.persist(user);
-        System.out.println("nativeHibernate: " + user1);
+        System.out.println("nativeHibernate: " + user1);*/
     }
 }

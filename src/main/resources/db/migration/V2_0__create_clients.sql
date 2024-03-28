@@ -1,0 +1,1 @@
+INSERT INTO client (id, age, name) VALUES ('d4979086-12ad-4979-9a12-8ea56b4b018b', 25, 'No TEST');
