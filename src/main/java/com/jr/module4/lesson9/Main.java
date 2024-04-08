@@ -1,6 +1,7 @@
 package com.jr.module4.lesson9;
 
 
+import com.jr.module4.HibernateFactoryUtil;
 import com.jr.module4.lesson9.model.MyClient;
 import jakarta.persistence.EntityManager;
 import org.hibernate.Session;

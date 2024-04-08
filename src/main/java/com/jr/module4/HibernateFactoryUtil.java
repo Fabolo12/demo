@@ -1,4 +1,4 @@
-package com.jr.module4.lesson11;
+package com.jr.module4;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;

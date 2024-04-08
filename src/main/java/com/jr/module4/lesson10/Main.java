@@ -1,6 +1,6 @@
 package com.jr.module4.lesson10;
 
-import com.jr.module4.lesson9.HibernateFactoryUtil;
+import com.jr.module4.HibernateFactoryUtil;
 import com.jr.module4.lesson9.model.MyClient;
 import org.flywaydb.core.Flyway;
 import org.hibernate.Session;

@@ -1,5 +1,6 @@
 package com.jr.module4.lesson11;
 
+import com.jr.module4.HibernateFactoryUtil;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
