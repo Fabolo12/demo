@@ -2,6 +2,7 @@ package com.jr.module4.lesson13;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
@@ -31,7 +32,7 @@ public class Person {
     @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "person")
     private Set<Address> addresses;
 
-    @ManyToMany(cascade = CascadeType.PERSIST, mappedBy = "people")
+    @ManyToMany(cascade = CascadeType.PERSIST, mappedBy = "people", fetch = FetchType.LAZY)
     private Set<Work> works;
 
     public void setPassport(final Passport passport) {

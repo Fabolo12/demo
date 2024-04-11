@@ -11,6 +11,27 @@ public class Main {
     public static void main(String[] args) {
         final EntityManager entityManager = HibernateFactoryUtil.getEntityManager();
         entityManager.getTransaction().begin();
+        final ElementCollectionExample example = new ElementCollectionExample();
+        example.setName("example 1");
+        entityManager.persist(example);
+        entityManager.getTransaction().commit();
+        entityManager.close();
+
+        final EntityManager entityManager1 = HibernateFactoryUtil.getEntityManager();
+        System.out.println("Find 1");
+        entityManager1.find(ElementCollectionExample.class, example.getId());
+        entityManager1.find(ElementCollectionExample.class, example.getId());
+        entityManager1.clear();
+        System.out.println("Find 2");
+        entityManager1.find(ElementCollectionExample.class, example.getId());
+        final EntityManager entityManager2 = HibernateFactoryUtil.getEntityManager();
+        System.out.println("Find 3");
+        entityManager2.find(ElementCollectionExample.class, example.getId());
+    }
+
+    private static void manyToManyExample() {
+        final EntityManager entityManager = HibernateFactoryUtil.getEntityManager();
+        entityManager.getTransaction().begin();
 
         final Person person1 = new Person();
         person1.setName("Persona 1");
@@ -36,7 +57,12 @@ public class Main {
 
         final EntityManager entityManager1 = HibernateFactoryUtil.getEntityManager();
         final Person rcPerson = entityManager1.find(Person.class, person1.getId());
-        System.out.println(rcPerson);
+//        entityManager1.close();
+        System.out.println(rcPerson.getId());
+        System.out.println("~~~~");
+        System.out.println("Works size: " + rcPerson.getWorks().size());
+        System.out.println("Works size: " + rcPerson.getWorks().size());
+        System.out.println("Addresses size: " + rcPerson.getAddresses().size());
     }
 
     private static void oneToManyExample() {
