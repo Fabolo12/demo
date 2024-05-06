@@ -10,6 +10,7 @@ import org.hibernate.cfg.Configuration;
 public class HibernateFactoryUtil {
     private static SessionFactory sessionFactory;
     private static EntityManagerFactory entityManagerFactory;
+    private static EntityManager entityManager;
 
     public static Session openSession() {
         if (sessionFactory == null) {
@@ -27,7 +28,11 @@ public class HibernateFactoryUtil {
             entityManagerFactory = Persistence.createEntityManagerFactory("persistence");
         }
 
-        return entityManagerFactory.createEntityManager();
+        if (entityManager == null) {
+            entityManager = entityManagerFactory.createEntityManager();
+        }
+
+        return entityManager;
 
     }
 }
